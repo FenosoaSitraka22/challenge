@@ -1,0 +1,203 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to top left, rgb(255, 153, 0), rgb(240, 216, 165));
+    padding: 20px 0;
+}
+
+.main-pannel{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 70%;
+    height: 700px;
+    border-radius: 0.5rem;
+    background-color: rgb(247, 224, 202);
+    padding-bottom: 1.5rem;
+    overflow: hidden;
+    display: none;
+}
+
+.header-panel{
+    padding: 2.5rem 1.5rem ;
+    height: 80px;
+    width: 100%;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-logo{
+    height: 2.5rem;
+}
+.search{
+    position: relative;
+    border-radius: 5rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    color: rgb(54, 53, 53);
+    
+    transform: translateX(10%);
+}
+.search:focus{
+    border-radius: 5rem;
+    border: none;
+    outline: none;
+
+}
+.button{
+    background: none;
+    border: 1px solid grey;
+    border-radius: 5rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+}
+.btn-search{
+    position: relative;
+    border: none;
+    transform: translateX(-10%);
+    background-image: linear-gradient(to top left, rgb(255, 94, 0), rgb(240, 216, 165));;
+}
+.btn-new-conversation{
+    border: 1px solid grey;
+}
+.btn-new-conversation:hover{
+    background-image: linear-gradient(to top left, rgb(255, 153, 0), rgb(240, 216, 165));
+    transition: ease-in-out 1s;
+}
+.btn-logout{
+    border: 1px solid grey;
+
+}
+.btn-logout:hover{
+    background-image: linear-gradient(to top left, rgb(255, 30, 0), rgb(240, 216, 165));
+    transition: ease-in-out 1s;
+}
+.img-search{
+    height: 1.2rem;
+}
+.menu-toggle{
+    width: 1.5rem;
+    height: 2rem;
+    border: 1px solid black;
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+   
+    .search{
+        width: 60%;
+    }
+    .btn-search{
+        width: 30%;
+    }
+    .serch-text{
+        display: none;
+    }
+    .menu{
+        display: none;
+        position: absolute;
+        right: 0;
+        transform: translate(-1rem,80%);
+    }
+    .btn-new-conversation{
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .btn-logout{
+        display: block;
+        width: 100%;
+
+    }
+    .menu-toggle{
+        display: block;
+    }
+    
+}
+.show{
+    display: block;
+    animation: backwards;
+}
+.body-panel{
+    
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 600px;
+    background-color: #fff;
+}
+.conversation-container{
+    width: 35%;
+    background-color: #fff;
+   
+    overflow-y: scroll;
+}
+
+.conversation{
+    border-bottom: 1px solid grey;
+    padding: 0.2rem 0.5rem ;
+}
+.conversation:hover{
+    background-color: rgb(219, 218, 218);
+    cursor: pointer;
+}
+.message{
+    width: 200px;
+    border-radius: 20% ;
+    margin: 10px 20px;
+    padding: 25px;
+    position: relative;
+    word-break: break-word;
+}
+.conversion-detail-container{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: aquamarine;
+}
+.message-user-container{
+    display: flex;
+    justify-content: flex-end;
+}
+.message-inter-container{
+    display: flex;
+    justify-content: flex-end;
+}
+.message-interlocuteur{
+    background-color: rgba(240, 248, 255, 0.703);
+}
+.message-user{
+    background-color: rgba(90, 166, 234, 0.703);
+    right: 0px ;
+}
+.messages-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: red;
+}
+
+
+
+#send{
+    width: 20%;
+}
+#msg{
+   
+    width: 80%;
+    height: 40px;
+}
+.form{
+    display: flex;
+    position: relative;
+    width: 100%;
+}
